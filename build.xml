@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="compile"> // compile is the default element, it goes to there first
+<target name="clean">
+<delete dir="./build/classes"/>
+<delete dir="./build"/>
+</target>
+<target name="compile" depends="clean"> // compile is depends on clean so it goes to clean element
+<mkdir dir="./build"/>
+<mkdir dir="./build/classes"/>
+<javac includeantruntime="true" srcdir="./src" destdir="./build/classes"/> // src is the source files directory in git hub. That mean we have build.xml, src directory in your repository and code files in src directory.
+</target>
+</project>
